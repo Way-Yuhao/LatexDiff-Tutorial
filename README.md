@@ -1,6 +1,6 @@
 # Latexdiff Tutorial
 
-Latexdiff shows highlights the difference betweent two latex documents. Follow these steps:  
+[Latexdiff](https://ctan.org/pkg/latexdiff?lang=en) shows highlights the difference betweent two latex documents. Follow these steps:  
 
 1. In the project directory, flatten latex files into two copies: `pre.tex` and `post.tex`.
 2. Run this in terminal: `latexdiff pre.tex post.tex > diff.tex`
