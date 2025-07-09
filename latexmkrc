@@ -1,1 +1,1 @@
-$pdflatex = "latexdiff main.tex main2.tex > main-d.tex; pdflatex %O  main-d"
+$pdflatex = "latexdiff pre.tex post.tex > diff.tex; pdflatex %O diff";

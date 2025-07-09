@@ -19,10 +19,11 @@ Latexdiff will generate a PDF that looks something like this:
 
 ## Overleaf
 Steps 1-2 can be done in Overleaf, with one additional step: under root directory, create a file called `latexmkrc` with the following content:  
-```
-$pdflatex = "latexdiff pre.tex post.tex > main-d.tex; pdflatex %O  main-d"
+```pearl
+$pdflatex = "latexdiff pre.tex post.tex > diff.tex; pdflatex %O diff";
 ```
 This will automatically generate `diff.tex` when you compile the project.
 
+- TO modify `diff.tex`, one can try downloading the `diff.tex` file from Overleaf, and then uploading it back.
 ## Resources
 - [Latexdiff Manual](resources/manual.pdf)
