@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\title{latexdiff}
+\author{me\and you}
+\date{May 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Timely and accurate detection of hurricane debris is critical for effective disaster response and community resilience. While post-disaster aerial imagery is readily available, robust debris segmentation solutions applicable across multiple disaster regions remain limited.
+% Developing a generalized solution is challenging due to varying environmental and imaging conditions that alter debris' visual signatures across different regions, further compounded by the scarcity of training data.
+Since environmental and imaging conditions vary by region and alter debris’ visual signatures, developing a debris segmentation model suitable for different hazard scenarios is challenging, especially given the scarcity of training data~\cite{wu2020phrasecut}.
+% This study addresses these challenges by fine-tuning pre-trained foundation vision models, achieving robust performance with a relatively small, high-quality dataset.
+This study addresses these challenges by relying on vast pretrained knowledge from the foundation vision model CLIP and fine-tuning a lightweight decoder on labeled debris imagery, thereby achieving robust performance in segmenting non-vegetative debris within complex urban backgrounds with a relatively small, high-quality dataset.
+To enable fine-tuning, this work introduces an open-source dataset comprising approximately 1,200 manually annotated aerial RGB images of structural debris from Hurricanes Ian, Ida, and Ike.
+To mitigate human biases and enhance data quality, labels from multiple annotators are strategically aggregated into consensus annotations.
+% and visual prompt engineering is employed.
+The resulting fine-tuned model, named \emph{CLIPSeg-debris}, achieves a Dice score of 0.86 on data from Hurricane Ida---a disaster event entirely excluded during training---outperforming baseline models.
+% with virtually no false positives in debris-free areas.
+% This work presents the first event-agnostic debris segmentation model requiring only standard RGB imagery during deployment, making it well-suited for rapid, large-scale post-disaster impact assessments and recovery planning.
+This approach thereby enables broader adoption across multiple hazard scenarios.
+effectively adapts to various backgrounds, sensor resolutions, and debris conditions.
+
+\bibliographystyle{apalike}
+\bibliography{additional_ref}
+\end{document}
